@@ -73,8 +73,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 </p>
 </details>
 
-<details><summary>Bloco 16 - Gerenciamento de estado com Redux</summary>
-  Você irá criar um sistema de cadastro de clientes. Esse sistema deve ser composto por 4 páginas.
+<h1>Bloco 16 - Gerenciamento de estado com Redux</h1>
+<h3>1. Você irá criar um sistema de cadastro de clientes. Esse sistema deve ser composto por 4 páginas.</h3>
 A primeira página deve ser a Home . Ela deverá ter um Link que possibilite ao usuário navegar para a página de login.
 A segunda página será a de Login . Devem existir 2 campos para pegar os dados do usuário (email e senha). Após o login ser efetuado, o usuário deve ser redirecionado para a página de Clientes cadastrados .
 Caso o login não seja feito, ou seja, o usuário tenha mudado à mão o link do sistema e ido para a página de cadastro ou de clientes, a única mensagem exibida deve ser: "Login não efetuado".
