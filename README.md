@@ -93,4 +93,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 - [ ] Na página de Clientes cadastrados, crie um botão que ordene os clientes em ordem alfabética a partir do campo nome . Caso o botão seja clicado novamente, a ordenação original deve ser mostrada.
 - [ ] Cada cadastro deve ser acompanhado de um botão com o texto X . Caso o botão seja clicado, o cadastro deve ser excluído.
+
+Obs: Verificar as branches, pois a master está com o código limpo para outros resolverem, as branches possuem atualizações.
 </details>
