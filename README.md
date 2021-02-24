@@ -73,6 +73,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 </p>
 </details>
 
+<details><summary>Requerimentos</summary>
+  
+*  npm install será o bastante para instalar todos os plugins necessários para utilização do sistema.
+
+</details>
+
 <h1>Bloco 16 - Gerenciamento de estado com Redux</h1>
 <h3>Você irá criar um sistema de cadastro de clientes. Esse sistema deve ser composto por 4 páginas.</h3>
 
