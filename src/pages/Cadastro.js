@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+import FormRegister from '../components/FormRegister';
 
 class Cadastro extends React.Component{
   render(){
@@ -8,7 +9,8 @@ class Cadastro extends React.Component{
     return(
       <div>
         { !loggedIn && (alert('Login não efetuado') || <Redirect to='/login' />) }
-        <h1>Cadastro</h1>
+        <FormRegister />
+        <button type='button'><Link to='/clientes'>Clientes</Link></button>
       </div>
     );
   }

@@ -1,5 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import { verifyLogin } from '../actions/verifyLogin';
 
 class FormLogin extends React.Component{
   constructor(){
@@ -7,7 +9,6 @@ class FormLogin extends React.Component{
     this.state = {
       email: '',
       password: '',
-      loggedIn: false,
     }
     this.handleLogin = this.handleLogin.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -23,17 +24,17 @@ class FormLogin extends React.Component{
   handleLogin(e){
     e.preventDefault();
     const { email, password } = this.state;
+    const { handleLoginAction } = this.props;
     if(email === 'admin@betrybe.com' && password === '123'){
-      this.setState({
-        loggedIn: true,
-      });
+      handleLoginAction(true);
     } else{
       alert('email ou senha incorretos');
     }
   }
 
   render(){
-    const { email, password, loggedIn } = this.state;
+    const { email, password } = this.state;
+    const { loggedIn } = this.props;
     return(
       <form>
         {loggedIn && <Redirect to="/clientes" />}
@@ -49,4 +50,12 @@ class FormLogin extends React.Component{
   }
 }
 
-export default FormLogin;
+const mapStateToProps = (state) => ({
+  loggedIn: state.loginReducer.loggedIn,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  handleLoginAction: (payload) => dispatch(verifyLogin(payload)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(FormLogin);
